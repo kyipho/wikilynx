@@ -1,8 +1,7 @@
 # Wikilynx
 
-Creates a simple database with some Wikipedia dumps and process the data.
+Creates a simple database with some Wikipedia dumps and processes the data.
 
----
 
 # Tools
 - Storage: Amazon Relational Database Service MYSQL (RDS MYSQL)
@@ -11,7 +10,6 @@ Creates a simple database with some Wikipedia dumps and process the data.
 
 These are part of the AWS free tier, do not require server management, and have good integration options with each other.
 
----
 
 # Notes
 - Created SQL tables are named according to the part of the question it answers
@@ -19,15 +17,14 @@ These are part of the AWS free tier, do not require server management, and have 
   - Reduced row counts for some intermediate SQL tables to reduce execution time (see setup.sql)
   - Tested batch job on a smaller wiki dump to reduce execution time (see batch_process.py)
 
----
 
 # Questions
 
 ## 1a) Basic metadata for every wiki page
-See `CREATE TABLE tbl_1a... ` in `setup.sql`
+See `CREATE TABLE tbl_1a...` in `setup.sql`
 
 ## 1b) Links between wiki pages
-See `CREATE TABLE tbl_1b... ` in `setup.sql`
+See `CREATE TABLE tbl_1b...` in `setup.sql`
 
 ## 2a) API for an SQL query
 See `api_query_processor.py`, which is run by AWS Lambda when called.

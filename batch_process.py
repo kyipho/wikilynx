@@ -225,7 +225,7 @@ def lambda_handler(event, context):
         cursor.execute(setup)
         logger.info(f'\nSUCCESS: Ran setup.sql\n')
     except:
-        logger.error(f'\nERROR: {dl} could not be deleted\n')
+        logger.error(f'\nERROR: Could not run setup.sql\n')
         raise
 
     # commit changes to database if no exceptions raised
